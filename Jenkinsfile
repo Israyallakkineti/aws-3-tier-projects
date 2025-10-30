@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         AWS_DEFAULT_REGION = 'us-east-1'
-        AWS_ACCOUNT_ID     = '657001761946'
+        AWS_ACCOUNT_ID     = '351370431004'
         IMAGE_TAG          = "1.0.${BUILD_NUMBER}"
         SCANNER_HOME       = tool 'sonar-scanner'
         FRONTEND_ECR_URI   = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/frontend-repo"
