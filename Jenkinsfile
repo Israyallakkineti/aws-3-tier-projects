@@ -136,7 +136,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     credentialsId: 'github-cred',
-                    url: 'git@github.com:Israyallakkineti/aws-3-tier-projects.git'
+                    url: 'git@github.com:Israyallakkineti/aws-2-tier-helm.git'
             }
         }
 
@@ -154,7 +154,7 @@ pipeline {
                     sh """
                         set -e
 
-                        git config user.email "vijaygiduthuri@example.com"
+                        git config user.email "israyallakkineti@gmail.com"
                         git config user.name "${GIT_USER_NAME}"
 
                         echo "=== BEFORE ==="
