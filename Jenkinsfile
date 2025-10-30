@@ -142,8 +142,8 @@ pipeline {
 
         stage('Update helm values.yaml with New Docker Image') {
             environment {
-                GIT_REPO_NAME = "aws-2-tier-helm-chart"
-                GIT_USER_NAME = "vijaygiduthuri"
+                GIT_REPO_NAME = "aws-2-tier-helm"
+                GIT_USER_NAME = "israyallakkineti"
             }
             steps {
                 withCredentials([usernamePassword(
@@ -160,8 +160,8 @@ pipeline {
                         echo "=== BEFORE ==="
                         cat helm-chart/values.yaml
 
-                        sed -i "s|image: 657001761946.dkr.ecr.us-east-1.amazonaws.com/frontend-repo:.*|image: 657001761946.dkr.ecr.us-east-1.amazonaws.com/frontend-repo:${IMAGE_TAG}|" helm-chart/values.yaml
-                        sed -i "s|image: 657001761946.dkr.ecr.us-east-1.amazonaws.com/backend-repo:.*|image: 657001761946.dkr.ecr.us-east-1.amazonaws.com/backend-repo:${IMAGE_TAG}|" helm-chart/values.yaml
+                        sed -i "s|image: 351370431004.dkr.ecr.us-east-1.amazonaws.com/frontend-repo:.*|image: 351370431004.dkr.ecr.us-east-1.amazonaws.com/frontend-repo:${IMAGE_TAG}|" helm-chart/values.yaml
+                        sed -i "s|image: 351370431004.dkr.ecr.us-east-1.amazonaws.com/backend-repo:.*|image: 351370431004.dkr.ecr.us-east-1.amazonaws.com/backend-repo:${IMAGE_TAG}|" helm-chart/values.yaml
 
                         echo "=== AFTER ==="
                         cat helm-chart/values.yaml
