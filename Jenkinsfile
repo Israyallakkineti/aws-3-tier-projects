@@ -22,7 +22,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     credentialsId: 'github-cred',
-                    url: 'https://github.com/vijaygiduthuri/aws-2-tier-project.git'
+                    url: 'git@github.com:Israyallakkineti/aws-3-tier-projects.git'
             }
         }
 
@@ -136,7 +136,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     credentialsId: 'github-cred',
-                    url: 'https://github.com/vijaygiduthuri/aws-2-tier-helm-chart.git'
+                    url: 'git@github.com:Israyallakkineti/aws-3-tier-projects.git'
             }
         }
 
